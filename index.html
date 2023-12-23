@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="shortcut icon" href="images/approve.png" type="image/x-icon">
+     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&family=Roboto+Condensed:wght@400;500&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="css/all.min.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/style.css">
+     <title>Bookmark</title>
+</head>
+<body>
+     <section>
+          <div class="layer bookmark py-4">
+          <header class="py-3 container d-flex justify-content-center">
+               <h1 class="text-center">Bookmarker</h1>
+          </header>
+          <div class="container content rounded d-flex flex-column align-items-center justify-content-center py-3 mt-3">
+               <h2 class="d-flex justify-content-center align-items-center py-2">
+                    <i class="fa-solid fa-bookmark"></i>
+                    <span class="px-2 text-center">Bookmark your favorite sites</span>
+                    <i class="fa-solid fa-bookmark"></i>
+               </h2>
+               <div class="container bg-form text-center py-4">
+                    <div class="px-2 z-3 d-flex flex-column align-items-center justify-content-center">
+                         <div class="d-flex flex-column align-items-start pt-4 w-100">
+                              <label for="siteName" class="pb-2"><i class="fa-solid fa-book-bookmark pe-1"></i>Site Name</label>
+                              <input oninput="validateName(this.value)" class="w-100 form-control" type="text" id="siteName" placeholder="Bookmark Name">
+                              <div class="alert alert-danger" id="alertName">must contains at least 3 characters or numbers without space or special character</div>
+                         </div>
+                         <div class="d-flex flex-column align-items-start py-4 w-100">
+                              <label for="siteName" class="pb-2"><i class="fa-solid fa-link pe-1"></i>Site URL</label>
+                              <input oninput="validateUrl(this.value)" class="w-100 form-control" type="text" id="siteUrl" placeholder="Website URL">
+                              <div class="alert alert-danger" id="alertUrl">must contains at least one character or number ,ends with valid TLD ".com" & ".edu" & ".bitnet" & ".int" & ".gov" & ".mil" & ".net" & ".org"</div>
+                         </div>
+                              <button onclick="getInputValues()" id="add" type="submit" class="submit btn px-4">Add Site</button>
+                              <button onclick="updateSite()"  id="update" type="submit" class="btn update btn-secondary px-4">Update Site</button>
+                    </div>
+               </div>
+               <div class="d-flex align-items-end justify-content-between w-100">
+                    <div><button onclick="clearList()" class="reset mb-1"><i class="fa-solid fa-rotate fs-5"></i></button></div>
+                    <div id="searchSite" class="search d-flex align-items-center justify-content-end w-75 pt-4">
+                         <label for="search"><i class="fa-solid fa-magnifying-glass pe-2"></i></label>
+                         <input id="search" type="text" onkeyup="search(this.value)" class="form-control w-50" placeholder="Search...">
+                    </div>
+               </div>
+               
+               <div class="w-100 mx-auto text-center d-flex flex-column align-items-center pt-2 pb-2">
+                    <table class="w-100 table">
+                         <thead>
+                              <th>Index</th>
+                              <th>Site Name</th>
+                              <th>Visit</th>
+                              <th>Update</th>
+                              <th>Delete</th>
+                         </thead>
+                         <tbody id="tbodyId">
+                         </tbody>
+                    </table>
+               </div>
+          </div>
+     </div>
+     </section>
+
+
+
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="js/main.js"></script>
+</body>
+</html>

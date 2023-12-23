@@ -1,0 +1,138 @@
+a{
+     text-decoration: none;
+     color: unset;
+}
+.alert{
+     display: none;
+     margin-top: 4px;
+     padding: 10px;
+}
+#update{
+     display: none;
+     font-size: 18px;
+}
+.reset{
+     background: unset;
+     color: unset;
+     border: 0;
+     transition: 0.1s;
+}
+.reset:active{
+     transform: rotate(300deg);
+}
+section{
+     background-image: url(../images/pexels-lumn-614710.jpg);
+     background-attachment: fixed;
+     background-size: cover;
+}
+section .bookmark{
+     background-color: rgba(0,0,0,0.6);
+     min-height: 100vh;
+}
+.bookmark .content{
+     background-color: rgba(255,255,255,0.6);
+    box-shadow: 0px 0px 25px 5px rgba(224,223,220,0.2);
+}
+.bookmark .container h1{
+     font-family: 'Pacifico', cursive;
+     font-size: 50px;
+     color: #e0dfdc;
+     position: relative;
+     z-index: 2;
+}
+.bookmark .container h1::before{
+     content: '';
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    background-color: #738746;
+    bottom: 10%;
+    z-index: -1;
+    transition: 0.4s;
+}
+.bookmark .container h1:hover::before{
+     height: 55%;
+}
+.bookmark .container h2{
+     font-family: 'Righteous', sans-serif;
+     font-size: 25px;
+     background-image: linear-gradient(to right, #785f43 ,#585b31);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     transition: 0.2s;
+}
+.bookmark .container label{
+     font-family: 'Roboto Condensed', sans-serif;
+     font-weight: 600;
+     letter-spacing: 0.7px;
+     color: #313333;
+}
+.bookmark .container input{
+     background-color: #d0cdc8;
+     color: #785f43;
+}
+.bookmark .container button{
+     font-family: 'Roboto Condensed', sans-serif;
+}
+.bookmark .container .submit{
+     background-color: #585b31;
+     color: #d0cdc8;
+     font-size: 18px;
+}
+.bookmark .container .submit:hover{
+     background-color: #d0cdc8;
+     color: #585b31;
+}
+.bookmark .container .bg-form{
+     background-color: rgba(64,78,91,0.3);
+}
+.table{
+     --bs-table-bg: #d0cdc8;
+     --bs-table-border-color: #93a0bfae;
+}
+.table thead th{
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     color: #785f43;
+}
+.table tr td{
+     font-family: auto;
+     color: #785f43;
+}
+.form-control:focus{
+     border-color: #775F42;
+     box-shadow: 0 0 0 0.25rem rgba(119,95,67,.4);
+}
+.form-control.is-valid{
+     border-color: var(--bs-form-valid-border-color);
+}
+.form-control.is-invalid{
+     border-color: var(--bs-form-invalid-border-color);
+}
+.btn-outline-warning{
+     --bs-btn-color: #698ba6;
+    --bs-btn-border-color: #698ba6;
+    --bs-btn-hover-color: #d0cdc8;
+    --bs-btn-hover-bg: #698ba6;
+    --bs-btn-hover-border-color: #698ba6;
+    --bs-btn-active-color: #d0cdc8;
+    --bs-btn-active-bg: #698ba6;
+    --bs-btn-active-border-color: #698ba6;
+    --bs-btn-disabled-color: #698ba6;
+    --bs-btn-disabled-border-color: #698ba6;
+}
+.btn-outline-secondary{
+     --bs-btn-hover-color: #d0cdc8;
+     --bs-btn-active-color: #d0cdc8;
+}
+.btn-outline-danger{
+    --bs-btn-color: #97384d;
+    --bs-btn-border-color: #97384d;
+    --bs-btn-hover-color: #d0cdc8;
+    --bs-btn-hover-bg: #97384d;
+    --bs-btn-hover-border-color: #97384d;
+    --bs-btn-active-color: #d0cdc8;
+    --bs-btn-active-bg: #97384d;
+    --bs-btn-active-border-color: #97384d;
+    --bs-btn-disabled-color: #97384d;
+    --bs-btn-disabled-border-color: #97384d;
+}
